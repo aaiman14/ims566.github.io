@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journals</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+            background: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .desc {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        table th {
+            background: #003366;
+            color: white;
+        }
+
+        table tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+
+        .chartBox {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ---------------- DARK MODE CSS ---------------- */
+        body.dark-mode {
+            background: #111 !important;
+            color: #fff !important;
+        }
+
+        body.dark-mode .container {
+            background: #1a1a1a !important;
+            color: #fff !important;
+            box-shadow: 0 0 15px rgba(255,255,255,0.1);
+        }
+
+        /* ❗ HEADER TABLE KEKAL BIRU */
+        body.dark-mode table th {
+            background: #003366 !important;
+            color: #fff !important;
+        }
+
+        body.dark-mode table td {
+            background: #2a2a2a !important;
+            color: #ddd !important;
+        }
+
+        body.dark-mode table tr:nth-child(even) {
+            background: #333 !important;
+        }
+
+        body.dark-mode .desc {
+            color: #ccc !important;
+        }
+
+        /* Dark mode toggle button (same style across pages) */
+        #themeToggle {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            padding: 10px 16px;
+            background: #222;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            z-index: 2000;
+        }
+
+        #themeToggle:hover {
+            background: #444;
+        }
+        /* -------------------------------------------------- */
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<!-- Dark mode button -->
+<button id="themeToggle">Dark Mode</button>
+
+<a href="index.html" class="back-btn">← Back to Home</a>
+
+<style>
+.back-btn {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 18px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+.back-btn:hover {
+    background: #555;
+}
+</style>
+
+
+<div class="container">
+    <h1>Journal Collection</h1>
+    <p class="desc">Browse through the list of academic journals available in our library system.</p>
+
+    <table>
+        <tr>
+            <th>Journal Title</th>
+            <th>Category</th>
+            <th>Year</th>
+        </tr>
+        <tr>
+            <td>International Journal of Computer Science</td>
+            <td>Technology</td>
+            <td>2023</td>
+        </tr>
+        <tr>
+            <td>Global Economics Review</td>
+            <td>Business</td>
+            <td>2022</td>
+        </tr>
+        <tr>
+            <td>Asian Medical Research Journal</td>
+            <td>Health</td>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <td>Education & Learning Research</td>
+            <td>Education</td>
+            <td>2024</td>
+        </tr>
+        <tr>
+            <td>Applied Artificial Intelligence Journal</td>
+            <td>Technology</td>
+            <td>2023</td>
+        </tr>
+    </table>
+
+    <div class="chartBox">
+        <canvas id="journalChart"></canvas>
+    </div>
+</div>
+
+<script>
+    // Data for chart
+    const labels = ["Technology", "Business", "Health", "Education"];
+    const values = [2, 1, 1, 1];
+
+    const ctx = document.getElementById('journalChart');
+    new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: labels,
+            datasets: [{
+                data: values,
+                backgroundColor: [
+                    "#4e73df",
+                    "#1cc88a",
+                    "#e74a3b",
+                    "#f6c23e"
+                ]
+            }]
+        }
+    });
+
+    /* ---------------- DARK MODE SCRIPT (GLOBAL) ---------------- */
+
+    // Apply saved theme
+    document.addEventListener("DOMContentLoaded", () => {
+        if (localStorage.getItem("theme") === "dark") {
+            document.body.classList.add("dark-mode");
+            document.getElementById("themeToggle").textContent = "Light Mode";
+        }
+    });
+
+    // Toggle theme on click
+    document.getElementById("themeToggle").onclick = function () {
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+            this.textContent = "Light Mode";
+        } else {
+            localStorage.setItem("theme", "light");
+            this.textContent = "Dark Mode";
+        }
+    };
+
+</script>
+
+</body>
+</html>

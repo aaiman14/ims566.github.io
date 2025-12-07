@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Page</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* --- CODE ASAL KEKAL --- */
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background: #1a1a1a;
+            color: white;
+            padding-top: 60px;
+            transition: 0.3s;
+            z-index: 1000;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 15px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-bottom: 1px solid #333;
+        }
+
+        .sidebar a:hover {
+            background: #333;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            z-index: 900;
+        }
+
+        .menu-btn {
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .button-row button {
+            padding: 12px 25px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        /* --- ADD WRAPPER SUPAYA BANNER & CHART TIDAK DALAM FLEX BODY --- */
+        .page-wrap {
+            width: 100%;
+            display: block;
+        }
+
+        /* --- CHART CONTAINER --- */
+        .chart-container {
+            width: 90%;
+            max-width: 900px;
+            margin: 50px auto 80px auto;
+            background: #ffffff;
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .chart-title {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #001a75;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-wrap">
+
+    <!-- SIDEBAR MENU -->
+    <div class="sidebar" id="sidebar">
+        <a href="ebooks.html">eBooks</a>
+        <a href="journals.html">Journals</a>
+        <a href="articles.html">Articles</a>
+        <a href="print books.html">Print Books</a>
+        <a href="login.html" style="color:#ff8080;">Logout</a>
+    </div>
+
+    <!-- DARK SCREEN -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- NAVBAR -->
+    <header class="top-nav">
+        <div class="menu-btn" onclick="openMenu()">☰</div>
+    </header>
+
+    <!-- FULLSCREEN BANNER -->
+    <section class="banner">
+        <h1>Welcome to the AA Library</h1>
+
+        <div class="button-row">
+            <button onclick="location.href='ebooks.html'">eBooks</button>
+            <button onclick="location.href='journals.html'">Journals</button>
+            <button onclick="location.href='articles.html'">Articles</button>
+            <button onclick="location.href='print books.html'">Print Books</button>
+        </div>
+    </section>
+
+    <!-- BAR CHART SECTION -->
+    <div class="chart-container">
+        <div class="chart-title">Daily Website Visitors</div>
+        <canvas id="visitorChart"></canvas>
+    </div>
+
+</div>
+
+<!-- CHART.JS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+function openMenu() {
+    document.getElementById("sidebar").style.left = "0";
+    document.getElementById("overlay").style.display = "block";
+}
+
+document.getElementById("overlay").onclick = function() {
+    document.getElementById("sidebar").style.left = "-250px";
+    document.getElementById("overlay").style.display = "none";
+}
+
+const ctx = document.getElementById('visitorChart').getContext('2d');
+
+const visitorChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+        datasets: [{
+            label: 'Visitors',
+            data: [120, 150, 180, 200, 160, 90, 70],
+            backgroundColor: '#4a77ff'
+        }]
+    },
+    options: {
+        responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true,
+                ticks: { stepSize: 50 }
+            }
+        }
+    }
+});
+</script>
+
+</body>
+</html>

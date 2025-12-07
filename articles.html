@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #e6f0ff; /* Soft blue background */
+            margin: 0;
+            padding: 0;
+            transition: 0.3s;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 5px;
+            color: #003366;
+        }
+
+        .desc {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        /* Search Bar */
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .search-bar input {
+            width: 70%;
+            max-width: 500px;
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            border-radius: 8px;
+        }
+
+        /* Articles Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        /* Card */
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #003366;
+        }
+
+        .tag {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 5px 10px;
+            background: #003366;
+            color: white;
+            border-radius: 5px;
+            font-size: 13px;
+        }
+
+        .read-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 15px;
+            background: #1cc88a;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .read-btn:hover {
+            background: #17a673;
+        }
+
+        /* ---------------- DARK MODE EXTRA CSS ---------------- */
+        .dark-mode body {
+            background: #0d0f12 !important;
+        }
+
+        .dark-mode h1,
+        .dark-mode .desc {
+            color: #f0f0f0 !important;
+        }
+
+        .dark-mode .card {
+            background: #1a1d21 !important;
+            color: #f0f0f0 !important;
+            box-shadow: 0 0 10px rgba(255,255,255,0.05) !important;
+        }
+
+        .dark-mode .tag {
+            background: #4a90e2 !important;
+        }
+
+        .dark-mode .search-bar input {
+            background: #1a1d21 !important;
+            color: white !important;
+            border: 1px solid #555 !important;
+        }
+
+    </style>
+
+</head>
+<body>
+  
+  <a href="index.html" class="back-btn">← Back to Home</a>
+
+<style>
+.back-btn {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 18px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+.back-btn:hover {
+    background: #555;
+}
+</style>
+
+    <div class="container">
+        <h1>Articles</h1>
+        <p class="desc">Explore various articles and publications available in our digital library.</p>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search articles...">
+        </div>
+
+        <!-- Articles Grid -->
+        <div class="grid">
+
+            <div class="card">
+                <h3>The Future of Artificial Intelligence</h3>
+                <p>How AI is shaping modern technology and influencing industries across the world.</p>
+                <span class="tag">Technology</span><br>
+                <a href="https://inkstickmedia.com/what-does-artificial-intelligence-mean-for-black-futures/?gad_source=1&gad_campaignid=23167662717&gbraid=0AAAAACF2Y9D_4T5CwNUTsgeTZ9aTucL96&gclid=CjwKCAiAxc_JBhA2EiwAFVs7XFxYKyUUeqoZb6raNbyqOOkxuOgOb0MYjDqUFqGe5vXmoyB_W5gZLhoCSNsQAvD_BwE" class="read-btn">Read Article</a>
+            </div>
+
+            <div class="card">
+                <h3>Global Business Trends 2025</h3>
+                <p>A deep dive into economic patterns and business strategies leading global growth.</p>
+                <span class="tag">Business</span><br>
+                <a href="https://explodingtopics.com/blog/business-trends" class="read-btn">Read Article</a>
+            </div>
+
+            <div class="card">
+                <h3>Mental Health Awareness</h3>
+                <p>Understanding the importance of mental well-being and ways to promote a balanced lifestyle.</p>
+                <span class="tag">Health</span><br>
+                <a href="https://www.who.int/health-topics/mental-health#tab=tab_1" class="read-btn">Read Article</a>
+            </div>
+
+            <div class="card">
+                <h3>Innovations in Education Technology</h3>
+                <p>How digital transformation is changing the world of education forever.</p>
+                <span class="tag">Education</span><br>
+                <a href="https://cepa.stanford.edu/research-areas/technological-innovations-education" class="read-btn">Read Article</a>
+            </div>
+
+            <div class="card">
+                <h3>Cybersecurity Essentials</h3>
+                <p>Key practices to stay safe online and protect data in the digital age.</p>
+                <span class="tag">Security</span><br>
+                <a href="https://www.netacad.com/courses/cybersecurity-essentials?courseLang=en-US" class="read-btn">Read Article</a>
+            </div>
+
+            <div class="card">
+                <h3>Preserving Knowledge in Modern Libraries</h3>
+                <p>A look into how libraries digitize and preserve rare books, journals, and historical archives.</p>
+                <span class="tag">Library Science</span><br>
+                <a href="https://ir.uitm.edu.my/id/eprint/70942/1/70942.pdf" class="read-btn">Read Article</a>
+            </div>
+
+        </div>
+    </div>
+
+
+<!-- GLOBAL DARK MODE SCRIPT -->
+<script>
+    // Apply saved theme
+    if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark-mode");
+    }
+</script>
+
+</body>
+</html>

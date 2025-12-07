@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Hauh</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <style>
+    
+    body {
+      background-color: whitesmoke;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    /* Hero Section */
+    .hero {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .back-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .content {
+      text-align: center;
+      color: whitesmoke;
+    }
+
+    .content img {
+      max-width: 250px;
+      margin-bottom: 8px;
+      border-radius: 50%;
+    }
+
+    .content h1 {
+      font-size: 90px;
+      font-weight: 900;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+      margin: 20px 0;
+      transition: 0.5s;
+    }
+
+    .content h1:hover {
+      -webkit-text-stroke: 3px whitesmoke;
+      color: transparent;
+    }
+
+    .content a {
+      text-decoration: none;
+      color: whitesmoke;
+      font-size: 20px;
+      border: 2px solid whitesmoke;
+      padding: 10px 40px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+    }
+
+    .content a:hover {
+      background-color: whitesmoke;
+      color: #a31d1d;
+    }
+
+    /* Responsive Media Queries */
+    @media (max-width: 768px) {
+      .content h1 {
+        font-size: 32px;
+      }
+
+      .content a {
+        font-size: 16px;
+        padding: 8px 30px;
+      }
+
+      .content img {
+        max-width: 100px;
+      }
+    }
+
+  </style>
+
+<body>
+
+    <div class="hero">
+      <video autoplay loop muted plays-inline class="back-video">
+        <source src="video/hauhads.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="content">
+        <img src="photo/hauhlogo.png" alt="HAUH Logo">
+        <h1>HAUH Tumbler Home</h1>
+        <a href="products.html">Explore</a>
+      </div>
+    </div>
+  
+
+</body>
+<footer>
+    <p>&copy; 2025 Copyright Reserved Hauh</p>
+  </footer>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <style>
+    .filters button {
+      background-color: #A31D1D;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .filters button:hover {
+      background-color: #800020;
+    }
+
+    .reward {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #A31D1D;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+    }
+    .reward:hover {
+      background-color: #800020;
+    }
+    .container {
+  position: relative;
+  text-align: center;
+  color: maroon;
+    }
+    .centered {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: larger;
+    }
+.vision-mission {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+        }    
+
+.container.small {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  flex: 1 1 calc(10% - 15px);
+  background: whitesmoke;
+  box-shadow: 0 4px 6px rgba(200, 53, 71, 0.555);
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+.card h2 {
+  font-size: 1.8rem;
+  color: maroon;
+  margin-bottom: 10px;
+  text-align: center;
+    }
+.card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: black;
+    }
+.container.hours{
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    }
+  
+  .hours-table {
+    width: 100%;
+    border-collapse: collapse;
+    }
+  .hours-table th, .hours-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    }
+  .hours-table th {
+    background-color: maroon;
+    color: #fff;
+    font-size: 1.1rem;
+    }
+  .hours-table td {
+    font-size: 1rem;
+    color: #555;
+        }
+  .hours-table .day {
+    font-weight: bold;
+    color: #333;
+        }
+  
+  .hours-table th, .hours-table td {
+    font-size: 0.9rem;
+    }
+
+    .image {
+  width: 250px; /* Set the desired width */
+  height: 220x; /* Set the desired height to match width for a square shape */
+  object-fit: cover; /* Ensures the image fills the square without distortion */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  display: block;
+  margin: auto; /* Centers the image within the container */
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background-color: maroon;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+  border-radius: 8px;
+}
+
+.container:hover .overlay {
+  width: 100%;
+  left: 0;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+ section {
+  margin: 20px;
+  line-height: 1.5;
+ }
+
+ .staff-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+
+ .staff-container {
+  display: flow-root;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: maroon;
+ }
+
+ .background {
+  background-image: url(photo/staff_background.png);
+ }
+
+  </style>
+
+<body>
+  <header>
+    <div class="profile">
+      <img src="photo/hauhlogo.png" alt="HAUH Logo">
+      <div>
+        <p style="font-size: 20px; margin: 0; color: whitesmoke;"><b>HAUH</b></p>
+        <h1 style="font-size: 16px; margin: 0; color: whitesmoke;"><i>Haus? Sedia HAUH!!</i></h1>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <div class="dropdown">
+          <li><a href="products.html">Our Products</a></li>
+          <div class="dropdown-content">
+            <a href="promotions.html" target="_blank">Promotion</a>
+            <a href="bestseller.html" target="_blank">Best Seller</a>
+          </div>
+        </div>
+        <li><a href="aboutus.html" target="_blank">About Us</a></li>
+        <li><a href="contact.html" target="_blank">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <img src="photo/tumbler_aboutus.png" alt="tumbler_aboutus" style="height: 700px;">
+    <div class="centered"><b>ABOUT US</b>
+    <br>
+    <br>
+    HAUH is a business dedicated to offering high-quality bottle tumblers. It combines functionality with style, aiming to provide customers with durable and aesthetically pleasing products for their hydration needs.
+    </div>
+  </div>
+  <br>
+  <div class="container small">
+  <div class="vision-mission">
+            <div class="card">
+                <h2>Vision</h2>
+                <p>To be a leading provider of innovative, eco-friendly, and stylish bottle tumblers that inspire sustainable living and enhance everyday hydration experiences.</p>
+            </div>
+            <div class="card">
+                <h2>Mission</h2>
+                <p>To create durable and aesthetically appealing tumblers that meet the needs of diverse lifestyles.</p>
+            </div></div>
+        </div>
+    </div>
+
+    <div class="staff-container">
+      <div class="container hours">
+        <div class="header">
+            <h1>Operating Hours</h1>
+        </div>
+        <table class="hours-table">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Hours</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="day">Monday</td>
+                    <td>10:00 AM - 5:00 PM</td>
+                </tr>
+                <tr>
+                    <td class="day">Tuesday</td>
+                    <td>10:00 AM - 5:00 PM</td>
+                </tr>
+                <tr>
+                    <td class="day">Wednesday</td>
+                    <td>10:00 AM - 5:00 PM</td>
+                </tr>
+                <tr>
+                    <td class="day">Thursday</td>
+                    <td>10:00 AM - 5:00 PM</td>
+                </tr>
+                <tr>
+                    <td class="day">Friday</td>
+                    <td>10:00 AM - 5:00 PM</td>
+                </tr>
+                <tr>
+                    <td class="day">Saturday</td>
+                    <td>Closed</td>
+                </tr>
+                <tr>
+                    <td class="day">Sunday</td>
+                    <td>Closed</td>
+                </tr>
+            </tbody>
+        </table>
+    </div></div>
+
+<div class="background">
+  <section>
+    <br>
+    <h1 style="text-align: center; margin-bottom: 10px;"><b>Meet Our Hauh Team</h3></b>
+    <div class="staff-grid">
+      <!-- CEO -->
+       
+      <div class="container image">
+        <img src="photo/ceo.jpeg" alt="CEO" class="image">
+        <div class="overlay">
+          <div class="text">CEO
+            <p>Aiman Hakim Redza</p>
+            <p>aeman@gmail.com</p>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <div class="staff-grid">
+        <!-- Operation Manager -->
+        <div class="container image">
+          <img src="photo/operation_manager.jpeg" alt="Operation Manager" class="image">
+          <div class="overlay">
+            <div class="text">Operation Manager
+              <p>Arifah Nur Ramdhana</p>
+              <p>arirri@gmail.com</p>
+            </div>
+          </div>
+        </div>
+       
+          <!-- Marketing -->
+          <div class="container image">
+            <img src="photo/marketing.jpeg" alt="Marketing" class="image">
+            <div class="overlay">
+              <div class="text">Marketing
+                <p>'Ainul Wafa</p>
+                <p>anlfa@gmail.com</p>
+              </div>
+            </div>
+          </div>
+          <br>
+          
+            <!-- Sales Lead -->
+            <div class="container image">
+              <img src="photo/sales_lead.jpeg" alt="Sales Lead" class="image">
+              <div class="overlay">
+                <div class="text">Sales Lead
+                  <p>Nur Aula Zulfa</p>
+                  <p>aulaazulfa@gmail.com</p>
+                </div>
+              </div>
+            </div>
+  
+              <!-- Product Designer -->
+              <div class="container image">
+                <img src="photo/product_designer.jpeg" alt="Product Designer" class="image">
+                <div class="overlay">
+                  <div class="text">Product Designer
+                    <p>Nur Syahiqah</p>
+                    <p>nriqah@gmail.com</p>
+                  </div>
+                </div>
+              </div></div></div>
+
+<footer>
+  <p>&copy; 2025 Copyright Reserved Hauh</p>
+</footer>
+</html>

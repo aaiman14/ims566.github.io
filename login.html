@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login UI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-image">
+        <div class="overlay-text">
+            <h2>Login Now!</h2>
+            <p>Welcome to AA Library! Please enter your details.</p>
+        </div>
+    </div>
+
+    <div class="form-area">
+
+        <label>Student ID</label>
+        <input id="studentId" type="text" placeholder="20220001">
+
+        <label>Password</label>
+        <div class="password-box">
+            <input id="password" type="password" placeholder="exp:123456">
+            <span class="eye">👁️</span>
+        </div>
+
+        <div class="row">
+            <label class="remember">
+                <input type="checkbox" checked>
+                Remember me
+            </label>
+
+            <a class="forgot" href="#">Forgot password?</a>
+        </div>
+
+        <button class="login-btn" onclick="login()">Log In →</button>
+
+        <p class="signup-text">Don't have an account?
+            <a href="#" class="signup">Sign Up</a>
+        </p>
+
+        <div class="divider">Or continue with</div>
+
+        <div class="social-login">
+            <button class="google"><img src="https://img.icons8.com/color/48/google-logo.png"/> Google</button>
+            <button class="apple"><img src="https://img.icons8.com/ios-filled/50/mac-os.png"/></button>
+        </div>
+
+        <div class="footer-links">
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+
+    </div>
+</div>
+
+<script>
+function login() {
+    let id = document.getElementById("studentId").value;
+    let pass = document.getElementById("password").value;
+
+    // SET YOUR LOGIN CREDENTIALS HERE
+    let correctId = "20220001";
+    let correctPass = "123456";
+
+    if (id === correctId && pass === correctPass) {
+        alert("Login successful!");
+        window.location.href = "index.html"; // GO TO YOUR LIBRARY PAGE
+    } else {
+        alert("Invalid Student ID or Password!");
+    }
+}
+</script>
+
+</body>
+</html>

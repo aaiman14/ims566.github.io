@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HAUH Tumbler Products</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <style>
+    .product-container {
+        display: flex;
+        gap: 20px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .filters {
+        margin-bottom: 20px;
+    }
+
+    .filters button, .filters input {
+        margin-right: 10px;
+    }
+  </style>
+
+
+<body>
+  <header>
+    <div class="profile">
+      <img src="photo/hauhlogo.png" alt="HAUH Logo">
+      <div>
+        <p style="font-size: 20px; margin: 0; color: whitesmoke;"><b>HAUH</b></p>
+        <h1 style="font-size: 16px; margin: 0; color: whitesmoke;"><i>Haus? Sedia HAUH!!</i></h1>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <div class="dropdown">
+          <li><a href="products.html">Our Products</a></li>
+          <div class="dropdown-content">
+            <a href="promotions.html" target="_blank">Promotion</a>
+            <a href="bestseller.html" target="_blank">Best Seller</a>
+          </div>
+        </div>
+        <li><a href="aboutus.html" target="_blank">About Us</a></li>
+        <li><a href="contact.html" target="_blank">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section>
+
+  <!-- Search Functionality -->
+<div class="filters">
+  <input type="text" id="search" placeholder="Search products..." onkeyup="searchProducts()">
+  <a href="#straw" class="filter-btn">Straw Collection</a>
+  <a href="#new" class="filter-btn">New Collection</a>
+  <a href="#accessories" class="filter-btn">HAUH Accessories</a>
+</div>
+
+  <h1 style="text-align: center; font-size: 40px;"><b>------ All Products ------</b></h1>
+
+  <div class="product-grid">
+    <div class="product">
+
+    <!-- Wrapper for all products -->
+    
+    <div class="product-container">
+    
+    <!-- Product 1 -->
+    <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front" style="background-color: transparent; width: 300px; height: 300px;">
+          <img src="photo/tumb1.png" alt="HydroEdge">
+        </div>
+        <div class="flip-box-back">
+          <h2>HydroEdge</h2>
+          <h3>RM 35.00</h3>
+          <ul style="text-align: left;">
+            <li><b>Capacity:</b> 18oz / 530ml</li>
+            <li><b>Height:</b> 21cm</li>
+            <li><b>Weight:</b> 0.31kg</li>
+            <button class="add-to-cart-btn" onclick="addToCart('HydroEdge')">Add to Cart</button>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front" style="background-color: transparent; width: 300px; height: 300px;">
+          <img src="photo/tumb2.png" alt="FrostFire">
+        </div>
+        <div class="flip-box-back">
+          <h2>FrostFire</h2>
+          <h3>RM 50.00</h3>
+          <ul style="text-align: left;">
+            <li><b>Capacity:</b> 32oz / 950ml</li>
+            <li><b>Height:</b> 23.5cm</li>
+            <li><b>Weight:</b> 0.431kg</li>
+            <button class="add-to-cart-btn" onclick="addToCart('FrostFire')">Add to Cart</button>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front" style="background-color: transparent; width: 300px; height: 300px;">
+          <img src="photo/tumb3.png" alt="WanderVessel">
+        </div>
+        <div class="flip-box-back">
+          <h2>WanderVessel</h2>
+          <h3>RM 40.00</h3>
+          <ul style="text-align: left;">
+            <li><b>Capacity:</b> 32oz / 720ml</li>
+            <li><b>Height:</b> 23.5cm</li>
+            <li><b>Weight:</b> 0.431kg</li>
+            <button class="add-to-cart-btn" onclick="addToCart('WanderVessel')">Add to Cart</button>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front" style="background-color: transparent; width: 300px; height: 300px;">
+          <img src="photo/tumb4.png" alt="HydroHorizon">
+        </div>
+        <div class="flip-box-back">
+          <h2>HydroHorizon</h2>
+          <h3>RM 45.00</h3>
+          <ul style="text-align: left;">
+            <li><b>Capacity:</b> 32oz / 720ml</li>
+            <li><b>Height:</b> 22.5cm</li>
+            <li><b>Weight:</b> 0.32kg</li>
+            <button class="add-to-cart-btn" onclick="addToCart('HydroHorizon')">Add to Cart</button>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front" style="background-color: transparent; width: 300px; height: 300px;">
+            <img src="photo/tumb5.png" alt="WanderBrew">
+          </div>
+          <div class="flip-box-back">
+            <h2>WanderBrew</h2>
+            <h3>RM 50.00</h3>
+            <ul style="text-align: left;">
+              <li><b>Capacity:</b> 32oz / 950ml</li>
+            <li><b>Height:</b> 23.5cm</li>
+            <li><b>Weight:</b> 0.431kg</li>
+              <button class="add-to-cart-btn" onclick="addToCart('WanderBrew')">Add to Cart</button>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Product 6 -->
+    <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front" style="background-color: transparent; width: 300px; height: 300px;">
+            <img src="photo/tumb6.png" alt="PixelMug">
+          </div>
+          <div class="flip-box-back">
+            <h2>PixelMug</h2>
+            <h3>RM 65.00</h3>
+            <ul style="text-align: left;">
+              <li><b>Capacity:</b> 40oz / 920ml</li>
+              <li><b>Height:</b> 22.5cm</li>
+              <li><b>Weight:</b> 0.42kg</li>
+              <button class="add-to-cart-btn" onclick="addToCart('PixelMug')">Add to Cart</button>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product KIDS -->
+    <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front" style="background-color: transparent; width: 300px; height: 300px;">
+            <img src="photo/tumbkids1.png" alt="BlushMist">
+          </div>
+          <div class="flip-box-back">
+            <h2>BlushMist</h2>
+            <h3>RM 45.00</h3>
+            <ul style="text-align: left;">
+              <li><b>Capacity:</b> 14oz / 410ml</li>
+              <li><b>Height:</b> 17.5cm</li>
+              <li><b>Weight:</b> 0.26kg</li>
+              <button class="add-to-cart-btn" onclick="addToCart('BlushMist')">Add to Cart</button>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 kids -->
+    <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front" style="background-color: transparent; width: 300px; height: 300px;">
+            <img src="photo/tumbkids2.png" alt="Lavender Breeze">
+          </div>
+          <div class="flip-box-back">
+            <h2>Lavender Breeze</h2>
+            <h3>RM 45.00</h3>
+            <ul style="text-align: left;">
+              <li><b>Capacity:</b> 14oz / 410ml</li>
+              <li><b>Height:</b> 17.5cm</li>
+              <li><b>Weight:</b> 0.26kg</li>
+              <button class="add-to-cart-btn" onclick="addToCart('Lavender Breeze')">Add to Cart</button>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 kids-->
+    <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front" style="background-color: transparent; width: 300px; height: 300px;">
+            <img src="photo/tumbkids3.png" alt="Peach Glow">
+          </div>
+          <div class="flip-box-back">
+            <h2>Peach Glow</h2>
+            <h3>RM 45.00</h3>
+            <ul style="text-align: left;">
+              <li><b>Capacity:</b> 14oz / 410ml</li>
+              <li><b>Height:</b> 17.5cm</li>
+              <li><b>Weight:</b> 0.26kg</li>
+              <button class="add-to-cart-btn" onclick="addToCart('Peach Glow')">Add to Cart</button>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product cup 1 -->
+       
+    <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front" style="background-color: transparent; width: 300px; height: 300px;">
+            <img src="photo/cup1.png" alt="Sandstone">
+          </div>
+          <div class="flip-box-back">
+            <h2>Sandstone</h2>
+            <h3>RM 32.00</h3>
+            <ul style="text-align: left;">
+              <li><b>Capacity:</b> 14oz / 410ml</li>
+              <li><b>Height:</b> 17.5cm</li>
+              <li><b>Weight:</b> 0.26kg</li>
+              <button class="add-to-cart-btn" onclick="addToCart('Sandstone')">Add to Cart</button>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product cup 2 -->
+    <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front" style="background-color: transparent; width: 300px; height: 300px;">
+            <img src="photo/cup2.png" alt="Rosé Dew">
+          </div>
+          <div class="flip-box-back">
+            <h2>Rosé Dew</h2>
+            <h3>RM 32.00</h3>
+            <ul style="text-align: left;">
+              <li><b>Capacity:</b> 14oz / 410ml</li>
+              <li><b>Height:</b> 17.5cm</li>
+              <li><b>Weight:</b> 0.26kg</li>
+              <button class="add-to-cart-btn" onclick="addToCart('Rosé Dew')">Add to Cart</button>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product cup 3 -->
+    <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front" style="background-color: transparent; width: 300px; height: 300px;">
+            <img src="photo/cup3.png" alt="SkySip">
+          </div>
+          <div class="flip-box-back">
+            <h2>SkySip</h2>
+            <h3>RM 32.00</h3>
+            <ul style="text-align: left;">
+              <li><b>Capacity:</b> 14oz / 410ml</li>
+              <li><b>Height:</b> 17.5cm</li>
+              <li><b>Weight:</b> 0.26kg</li>
+              <button class="add-to-cart-btn" onclick="addToCart('SkySip')">Add to Cart</button>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</section>
+      
+  <section>
+      <h1 style="text-align: center; font-size: 40px;"><a name="straw"><b>------ Straw Collection ------</b></a></h1>
+
+      <div class="product-grid">
+        <div class="product">
+    
+        <!-- Wrapper for all products -->
+        
+        <div class="product-container">
+
+
+      <!-- Product LavenderFrost -->
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front" style="background-color: transparent; width: 300px; height: 300px;">
+            <img src="photo/straw1.png" alt="LavenderFrost">
+          </div>
+          <div class="flip-box-back">
+            <h2>LavenderFrost</h2>
+            <h3>RM 49.00</h3>
+            <ul style="text-align: left;">
+              <li><b>Capacity:</b> 32oz / 650ml</li>
+              <li><b>Height:</b> 19.5cm</li>
+              <li><b>Weight:</b> 0.29kg</li>
+              <button class="add-to-cart-btn" onclick="addToCart('LavenderFrost')">Add to Cart</button>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product CrystalDew  -->
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front" style="background-color: transparent; width: 300px; height: 300px;">
+            <img src="photo/straw2.png" alt="CrystalDew ">
+          </div>
+          <div class="flip-box-back">
+            <h2>CrystalDew </h2>
+            <h3>RM 49.00</h3>
+            <ul style="text-align: left;">
+              <li><b>Capacity:</b> 32oz / 650ml</li>
+              <li><b>Height:</b> 19.5cm</li>
+              <li><b>Weight:</b> 0.29kg</li>
+              <button class="add-to-cart-btn" onclick="addToCart('CrystalDew ')">Add to Cart</button>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product MochaMist -->
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front" style="background-color: transparent; width: 300px; height: 300px;">
+            <img src="photo/straw3.png" alt="MochaMist">
+          </div>
+          <div class="flip-box-back">
+            <h2>MochaMist</h2>
+            <h3>RM 49.00</h3>
+            <ul style="text-align: left;">
+              <li><b>Capacity:</b> 32oz / 650ml</li>
+              <li><b>Height:</b> 19.5cm</li>
+              <li><b>Weight:</b> 0.29kg</li>
+              <button class="add-to-cart-btn" onclick="addToCart('MochaMist')">Add to Cart</button>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <section>
+        <h1 style="text-align: center; font-size: 40px;"><a name="new"><b>------ New Collection ------</b></a></h1>
+  
+        <div class="product-grid">
+          <div class="product">
+      
+          <!-- Wrapper for all products -->
+          
+          <div class="product-container">
+  
+  
+        <!-- Product BlushBreeze   -->
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front" style="background-color: transparent; width: 300px; height: 300px;">
+              <img src="photo/new1.png" alt="BlushBreeze  ">
+            </div>
+            <div class="flip-box-back">
+              <h2>BlushBreeze  </h2>
+              <h3>RM 59.00</h3>
+              <ul style="text-align: left;">
+                <li><b>Capacity:</b> 14oz / 410ml</li>
+                <li><b>Height:</b> 17.25cm</li>
+                <li><b>Weight:</b> 0.254kg</li>
+                <button class="add-to-cart-btn" onclick="addToCart('BlushBreeze  ')">Add to Cart</button>
+              </ul>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Product PeachFizz -->
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front" style="background-color: transparent; width: 300px; height: 300px;">
+              <img src="photo/new2.png" alt="PeachFizz">
+            </div>
+            <div class="flip-box-back">
+              <h2>PeachFizz</h2>
+              <h3>RM 59.00</h3>
+              <ul style="text-align: left;">
+                <li><b>Capacity:</b> 14oz / 410ml</li>
+                <li><b>Height:</b> 17.25cm</li>
+                <li><b>Weight:</b> 0.254kg</li>
+                <button class="add-to-cart-btn" onclick="addToCart('PeachFizz')">Add to Cart</button>
+              </ul>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Product GoldenHour -->
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front" style="background-color: transparent; width: 300px; height: 300px;">
+              <img src="photo/new3.png" alt="GoldenHour">
+            </div>
+            <div class="flip-box-back">
+              <h2>GoldenHour</h2>
+              <h3>RM 59.00</h3>
+              <ul style="text-align: left;">
+                <li><b>Capacity:</b> 14oz / 410ml</li>
+                <li><b>Height:</b> 17.25cm</li>
+                <li><b>Weight:</b> 0.254kg</li>
+                <button class="add-to-cart-btn" onclick="addToCart('GoldenHour')">Add to Cart</button>
+              </ul>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Product GoldenChai -->
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front" style="background-color: transparent; width: 300px; height: 300px;">
+              <img src="photo/new4.png" alt="GoldenChai">
+            </div>
+            <div class="flip-box-back">
+              <h2>GoldenChai</h2>
+              <h3>RM 59.00</h3>
+              <ul style="text-align: left;">
+                <li><b>Capacity:</b> 14oz / 410ml</li>
+                <li><b>Height:</b> 17.25cm</li>
+                <li><b>Weight:</b> 0.254kg</li>
+                <button class="add-to-cart-btn" onclick="addToCart('GoldenChai')">Add to Cart</button>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+            </div>
+          </div>
+        </div>
+        </section>
+
+        <section>
+          <h1 style="text-align: center; font-size: 40px;"><a name="accessories"><b>------ HAUH Accessories ------</b></a></h1>
+    
+          <div class="product-grid">
+            <div class="product">
+        
+            <!-- Wrapper for all products -->
+            
+            <div class="product-container">
+    
+    
+          <!-- Product acc 1 -->
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front" style="background-color: transparent; width: 300px; height: 300px;">
+                <img src="photo/acc1.png" alt="Keyring Charms">
+              </div>
+              <div class="flip-box-back">
+                <h2>Keyring Charms</h2>
+                <h3>RM 10.00</h3>
+                <ul style="text-align: left;">
+                  <li>Limited-time Hauh accessories.</li>
+                  <li>Email us your favorite alphabet.</li>
+                  <li>Add your preferred Hauh Charms to your cart.</li>
+                  <button class="add-to-cart-btn" onclick="addToCart('Keyring Charms')">Add to Cart</button>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Product acc 2 -->
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front" style="background-color: transparent; width: 300px; height: 300px;">
+                <img src="photo/acc2.png" alt="Bag Tumbler">
+              </div>
+              <div class="flip-box-back">
+                <h2>Bag Tumbler</h2>
+                <h3>RM 29.00</h3>
+                <ul style="text-align: left;">
+                  <li><b>Size:</b> 28cm x 16.5cm</li>
+                  <li>Pack your essentials easily with our spacious bottle bag.</li>
+                  <button class="add-to-cart-btn" onclick="addToCart('Bag Tumbler')">Add to Cart</button>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Product acc 3 -->
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front" style="background-color: transparent; width: 300px; height: 300px;">
+                <img src="photo/acc3.png" alt="Cup Holder">
+              </div>
+              <div class="flip-box-back">
+                <h2>Cup Holder</h2>
+                <h3>RM 25.00</h3>
+                <ul style="text-align: left;">
+                  <li><b>Size:</b> Regular</li>
+                  <li>Compatible for Coffee Cup Regular</li>
+                  <button class="add-to-cart-btn" onclick="addToCart('Cup Holder')">Add to Cart</button>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Product acc 4 -->
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front" style="background-color: transparent; width: 300px; height: 300px;">
+                <img src="photo/acc4.png" alt="Straw Cover">
+              </div>
+              <div class="flip-box-back">
+                <h2>Straw Cover</h2>
+                <h3>RM 7.00</h3>
+                <ul style="text-align: left;">
+                  <li>Keep your straw clean and stylish with the Straw Cover.</li>
+                  <li>Functional cover offers the perfect convenience for everyday use.</li>
+                  <button class="add-to-cart-btn" onclick="addToCart('Straw Cover')">Add to Cart</button>
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+              </div>
+            </div>
+          </div>
+          </section>
+
+
+<!-- Cart Section -->
+<div id="cart-section" class="cart-section">
+  <div class="cart-header">Your Cart</div>
+  <ul id="cart-items" class="cart-items"></ul>
+</div>
+
+<!-- Cart Icon -->
+<div class="cart-icon" onclick="toggleCart()">🛒</div>
+
+<script>
+  const cartItems = [];
+
+  function addToCart(productName) {
+    // Check if the item already exists in the cart
+    const existingItem = cartItems.find(item => item.name === productName);
+
+    if (existingItem) {
+      existingItem.quantity++; // Increase quantity if already in cart
+    } else {
+      // Get the price from the product name (example: 'HydroEdge' -> RM 35.00)
+      let price;
+      switch (productName) {
+        case 'HydroEdge': price = 35.00; break;
+        case 'FrostFire': price = 50.00; break;
+        case 'WanderVessel': price = 40.00; break;
+        case 'HydroHorizon': price = 45.00; break;
+        case 'WanderBrew': price = 30.00; break;
+        case 'PixelMug': price = 40.00; break;
+        case 'BlushMist': price = 45.00; break;
+        case 'Lavender Breeze': price = 45.00; break;
+        case 'Peach Glow': price = 45.00; break;
+        case 'Sandstone': price = 32.00; break;
+        case 'Rosé Dew': price = 32.00; break;
+        case 'SkySip': price = 32.00; break;
+        case 'LavenderFrost': price = 49.00; break;
+        case 'CrystalDew ': price = 49.00; break;
+        case 'MochaMist': price = 49.00; break;
+        case 'BlushBreeze  ': price = 59.00; break;
+        case 'PeachFizz': price = 59.00; break;
+        case 'GoldenHour': price = 59.00; break;
+        case 'GoldenChai': price = 59.00; break;
+        case 'Keyring Charms': price = 10.00; break;
+        case 'Bag Tumbler': price = 29.00; break;
+        case 'Cup Holder': price = 25.00; break;
+        case 'Straw Cover': price = 7.00; break;
+        default: price = 0; // Default case if not found
+      }
+
+      // Add new item to the cart
+      cartItems.push({ name: productName, price, quantity: 1 });
+    }
+
+    updateCart();
+    alert(`${productName} has been added to your cart!`);
+  }
+
+  function updateCart() {
+    const cartItemsContainer = document.getElementById('cart-items');
+    cartItemsContainer.innerHTML = ''; // Clear previous items
+
+    cartItems.forEach((item, index) => {
+      const cartItem = document.createElement('li');
+      cartItem.classList.add('cart-item');
+      cartItem.innerHTML = `
+        <span class="cart-item-name">${item.name} - RM ${item.price.toFixed(2)}</span>
+        <input type="number" class="cart-item-quantity" value="${item.quantity}" min="1" onchange="updateQuantity(${index}, this.value)">
+        <span class="cart-item-remove" onclick="removeFromCart(${index})">Remove</span>
+      `;
+      cartItemsContainer.appendChild(cartItem);
+    });
+
+    updateTotal();
+  }
+
+  function updateQuantity(index, newQuantity) {
+    if (newQuantity < 1) {
+      alert('Quantity cannot be less than 1');
+      return;
+    }
+
+    cartItems[index].quantity = parseInt(newQuantity);
+    updateCart();
+  }
+
+  function removeFromCart(index) {
+    cartItems.splice(index, 1); // Remove item at index
+    updateCart();
+  }
+
+  function updateTotal() {
+    const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    const cartSection = document.getElementById('cart-section');
+    let totalElement = cartSection.querySelector('.cart-total');
+
+    if (!totalElement) {
+      totalElement = document.createElement('div');
+      totalElement.classList.add('cart-total');
+      cartSection.appendChild(totalElement);
+    }
+
+    totalElement.innerText = `Total: RM ${total.toFixed(2)}`;
+  }
+
+  function toggleCart() {
+    const cartSection = document.getElementById('cart-section');
+    cartSection.classList.toggle('open');
+  }
+
+  //Search funtionality
+  function searchProducts() {
+    var input, filter, productContainer, products, title, i, txtValue;
+    input = document.getElementById('search');
+    filter = input.value.toUpperCase();
+    productContainer = document.querySelector('.product-container');
+    products = productContainer.getElementsByClassName('flip-box');
+    
+    for (i = 0; i < products.length; i++) {
+      title = products[i].querySelector('.flip-box-back h2');
+      if (title) {
+        txtValue = title.textContent || title.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          products[i].style.display = "";
+        } else {
+          products[i].style.display = "none";
+        }
+      }
+    }
+  }
+
+</script>
+
+  
+
+  <div class="reward">
+    <a href="contact.html">&#128222 Chat Us</a>
+  </div>
+</body>
+<footer>
+    <p>&copy; 2025 Copyright Reserved Hauh</p>
+  </footer>
+</html>

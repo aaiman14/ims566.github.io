@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Contact Us</title>
+</head>
+
+<style>
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  min-height: 100vh;
+  color: maroon
+}
+
+/* Left Content Section */
+.content {
+  max-width: 40%;
+}
+
+.content h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.content.p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.info p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.info .icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  color: maroon
+}
+
+/* Form Section */
+.form-container {
+  background: beige;
+  color: beige; /* Added missing semicolon */
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  max-width: 40%;
+}
+
+.form-container h2 {
+  font-size: 1.8rem;
+  color: maroon; /* Added missing semicolon */
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+form input, form textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid;
+  border-radius: 4px;
+}
+
+button {
+    padding: 12px 20px; 
+    background-color:maroon;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block; 
+    margin: 20px auto; 
+  }
+
+form button:hover {
+  background-color: maroon;
+}
+
+.bottom-frame {
+  position: fixed; 
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: maroon; 
+  color: beige;
+  text-align: center;
+  padding: 10px;
+  border-top: 5px solid burlywood;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+}
+
+.bottom-frame p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+ .bottom-frame a {
+  color: burlywood;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.bottom-frame a:hover {
+  text-decoration: underline;
+}
+  
+.map-container {
+  text-align: center; 
+  }
+.map-container img {
+  border: 5px solid maroon; 
+  height: auto; 
+  }
+h1 {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: maroon;
+  }
+.line {
+  width: 90%; 
+  border: 0;
+  border-top: 1px solid #82271d; 
+  margin: 10px auto; 
+  }
+
+.review {
+  margin-bottom: 20px;
+  padding: 15px;
+}
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.review-header h3 {
+  margin: 0px;}
+.rating {
+  color: #f39c12;
+}
+.review-content {
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+.review-footer {
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+
+@keyframes wobble {
+    0% { transform: rotate(0); }
+    25% { transform: rotate(3deg); }
+    50% { transform: rotate(-3deg); }
+    75% { transform: rotate(2deg); }
+    100% { transform: rotate(0); }
+}
+
+.card {
+    width: 800px;
+    background: beige;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
+    text-align: left;
+}
+.card:hover {
+    animation: bounce 0.6s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.image-map-container img {
+            border: 2px solid #82271d;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+</style>
+<body>
+<header>
+    <div class="profile">
+      <img src="photo/hauhlogo.png" alt="HAUH Logo">
+      <div>
+        <p style="font-size: 20px; margin: 0; color: whitesmoke;"><b>HAUH</b></p>
+        <h1 style="font-size: 16px; margin: 0; color: whitesmoke; font-family: Garamond, serif;"><i>Haus? Sedia HAUH!!</i></h1>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <div class="dropdown">
+          <li><a href="products.html">Our Products</a></li>
+          <div class="dropdown-content">
+            <a href="promotions.html" target="_blank">Promotion</a>
+            <a href="bestseller.html" target="_blank">Best Seller</a>
+          </div>
+        </div>
+        <li><a href="aboutus.html" target="_blank">About Us</a></li>
+        <li><a href="contact.html" target="_blank">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+    
+  <div class="contact-container">
+    <div class="center"></div>
+    <div class="content">
+        <h2>Contact Us</h2>
+      <p>For any inquiries</p>
+        <div class="info">
+        <p><span class="icon">📍</span> <b>Address:</b> Level 3, L2-K305, IOI City Mall, ioi Resort, 62502 Putrajaya, Wilayah Persekutuan Putrajaya</p>
+        <p><span class="icon">📞</span> <b>Phone:</b> +603-8843289</p>
+        <p><span class="icon">📧</span> <b>Email:</b> hauh@gmail.com</p> 
+        <p><span class="icon">🌐</span> <b>Social media:</b> @hauhtumbler</p>
+      </div>
+    </div>
+
+    <div class="form-container">
+      <h2>Get in Touch!</h2>
+      <form action="mailto:nursyahiqah123@gmail.com" method="post" enctype="text/plain">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Type your Message..." rows="5" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+<div class="map-container">
+  <hr class="line">
+  <h1 align="center">Our Location</h1>
+  <hr class="line">
+
+
+<div class="image-map-container">
+  <img src="photo/Hauh's Location.png" usemap="#image-map">
+</div>
+
+<map name="image-map">
+  <area target="_blank" alt="Level 3, Hauh's Location" title="Level 3, Hauh's Location" href="https://g.co/kgs/GcERDk6" coords="572,216,73" shape="circle">
+</map>
+</div>
+
+<hr class="line">
+<div align="center">
+  <h1>Our Customer Review</h1>
+    <hr class="line">
+</div>
+
+
+<div align="center">
+    <div class="review">
+        <div class="card">
+            <h3>Jeon Jungkook</h3>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <div class="review-content">
+                <p>"Highly recommended for anyone looking for a reliable, eco-friendly tumbler"</p>
+            </div>
+            <div class="review-footer">
+                <span>Posted on: January 18, 2025</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer Review 2 -->
+    <div class="review">
+        <div class="card">
+            <h3>Abang Bakar</h3>
+            <div class="rating">⭐⭐⭐⭐</div>
+            <div class="review-content">
+                <p>"It keeps my drinks cold for hours!"</p>
+            </div>
+            <div class="review-footer">
+                <span>Posted on: January 10, 2025</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer Review 3 -->
+    <div class="review">
+        <div class="card">
+            <h3>Fattah Amin</h3>
+            <div class="rating">⭐⭐⭐⭐</div>
+            <div class="review-content">
+                <p>"Great value for money. I’ve tried a few tumblers, but the Hauh Tumbler is by far the best. It’s durable, easy to clean, and it's affordable too!"</p>
+            </div>
+            <div class="review-footer">
+                <span>Posted on: January 9, 2025</span>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div align="center">
+  <!-- Customer Review 4 -->
+  <div class="review">
+    <div class="card">
+      <h3>Ariana Grande</h3>
+      <div class="rating">⭐⭐⭐</div>
+      <div class="review-content">
+        <p>"It’s a good tumbler, but I found that it doesn’t keep my drinks as hot as I’d hoped. The design is sleek, but I do wish it had a larger capacity. Still, it's not a bad purchase for everyday use."</p>
+      </div>
+      <div class="review-footer">
+        <span>Posted on: January 6, 2025</span>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+</body>
+<footer>
+  <p>&copy; 2025 Copyright Reserved Hauh</p>
+</footer>
+</html>

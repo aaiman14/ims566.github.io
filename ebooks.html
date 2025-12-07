@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            transition: 0.3s;
+        }
+
+        /* Top Welcome Section */
+        .header {
+            background-color: #4a90e2;
+            color: white;
+            padding: 50px;
+            text-align: center;
+            font-size: 35px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .subheader {
+            text-align: center;
+            margin-top: -25px;
+            font-size: 18px;
+            color: white;
+            transition: 0.3s;
+        }
+
+        /* EBook Section */
+        .container {
+            width: 100%;
+            padding: 40px 20px;
+            box-sizing: border-box;
+            transition: 0.3s;
+        }
+
+        .ebooks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-gap: 25px;
+            margin-top: 20px;
+        }
+
+        .ebook-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .ebook-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .ebook-title {
+            font-weight: bold;
+            margin-top: 12px;
+            font-size: 18px;
+        }
+
+        .ebook-desc {
+            color: #555;
+            margin: 8px 0;
+        }
+
+        .btn {
+            background-color: #0d4481;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-top: 8px;
+            text-decoration: none;
+        }
+
+        /* User statistics */
+        .stats {
+            margin-top: 40px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stats h2 {
+            margin: 0;
+            font-size: 25px;
+        }
+
+        .stats p {
+            color: #333;
+            font-size: 18px;
+        }
+
+        /* BACK BUTTON */
+        .back-btn {
+            display: inline-block;
+            margin: 15px;
+            padding: 10px 18px;
+            background: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+        .back-btn:hover {
+            background: #555;
+        }
+
+        /* --------------------------------------
+           DARK MODE CSS
+        ----------------------------------------*/
+        body.dark {
+            background-color: #121212 !important;
+            color: #e0e0e0 !important;
+        }
+
+        body.dark .header {
+            background-color: #1e3a5f !important;
+        }
+
+        body.dark .subheader {
+            color: #ddd !important;
+        }
+
+        body.dark .ebook-card {
+            background: #1f1f1f !important;
+            color: #fff !important;
+            box-shadow: 0 4px 12px rgba(255,255,255,0.05) !important;
+        }
+
+        body.dark .ebook-desc {
+            color: #ccc !important;
+        }
+
+        body.dark .stats {
+            background: #1f1f1f !important;
+            color: #fff !important;
+        }
+
+        /* Toggle Dark Mode Button */
+        #darkToggle {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            padding: 10px 15px;
+            background: #222;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            z-index: 2000;
+        }
+        #darkToggle:hover {
+            background: #444;
+        }
+    </style>
+</head>
+<body>
+
+<a href="index.html" class="back-btn">← Back to Home</a>
+
+<!-- DARK MODE BUTTON -->
+<button id="darkToggle">Dark Mode</button>
+
+<div class="header">
+    📚 Welcome to Digital Library System
+</div>
+<div class="subheader">
+    Explore e-books, read online & manage your learning resources.
+</div>
+
+<!-- Ebook List Section -->
+<div class="container">
+    <h2 style="text-align:center; font-size:28px;">📘 Available e-Books</h2>
+
+    <div class="ebooks-grid">
+
+        <!-- Ebook 1 -->
+        <div class="ebook-card">
+            <img src="image/martin eden.jpg">
+            <div class="ebook-title">Martin Eden</div>
+            <div class="ebook-desc">Living in Oakland at the beginning of the 20th century...</div>
+            <a href="https://standardebooks.org/ebooks/jack-london/martin-eden/text/single-page" class="btn">Read Now</a>
+        </div>
+
+        <!-- Ebook 2 -->
+        <div class="ebook-card">
+            <img src="image/wet magic.jpg">
+            <div class="ebook-title">Wet Magic</div>
+            <div class="ebook-desc">Four siblings discover an underwater world...</div>
+            <a href="https://standardebooks.org/ebooks/e-nesbit/wet-magic/text/single-page" class="btn">Read Now</a>
+        </div>
+
+        <!-- Ebook 3 -->
+        <div class="ebook-card">
+            <img src="image/hard time.jpg">
+            <div class="ebook-title">Hard Times</div>
+            <div class="ebook-desc">Victorian industrial life...</div>
+            <a href="https://standardebooks.org/ebooks/charles-dickens/hard-times/text/single-page" class="btn">Read Now</a>
+        </div>
+
+        <!-- Ebook 4 -->
+        <div class="ebook-card">
+            <img src="image/typee.jpeg">
+            <div class="ebook-title">Typee</div>
+            <div class="ebook-desc">Tom and Toby desert the ship...</div>
+            <a href="https://standardebooks.org/ebooks/herman-melville/typee/text/single-page" class="btn">Read Now</a>
+        </div>
+
+        <!-- Ebook 5 -->
+        <div class="ebook-card">
+            <img src="image/railway.jpg">
+            <div class="ebook-title">The Railway Children</div>
+            <div class="ebook-desc">Their father disappears...</div>
+            <a href="https://standardebooks.org/ebooks/e-nesbit/the-railway-children/text/single-page" class="btn">Read Now</a>
+        </div>
+
+        <!-- Ebook 6 -->
+        <div class="ebook-card">
+            <img src="image/herland.jpg">
+            <div class="ebook-title">Herland</div>
+            <div class="ebook-desc">An all-female civilization...</div>
+            <a href="https://standardebooks.org/ebooks/charlotte-perkins-gilman/herland/text/single-page" class="btn">Read Now</a>
+        </div>
+
+        <!-- Ebook 7 -->
+        <div class="ebook-card">
+            <img src="image/the scarlet.jpg">
+            <div class="ebook-title">The Scarlet Pimpernel</div>
+            <div class="ebook-desc">Master of disguise...</div>
+            <a href="https://standardebooks.org/ebooks/baroness-orczy/the-scarlet-pimpernel/text/single-page" class="btn">Read Now</a>
+        </div>
+
+        <!-- Ebook 8 -->
+        <div class="ebook-card">
+            <img src="image/vanity fair.jpg">
+            <div class="ebook-title">Vanity Fair</div>
+            <div class="ebook-desc">Early 19th-century England...</div>
+            <a href="https://standardebooks.org/ebooks/william-makepeace-thackeray/vanity-fair/text/single-page" class="btn">Read Now</a>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    // Apply saved theme on load
+    document.addEventListener("DOMContentLoaded", () => {
+        if (localStorage.getItem("theme") === "dark") {
+            document.body.classList.add("dark");
+            document.getElementById("darkToggle").textContent = "Light Mode";
+        }
+    });
+
+    // Toggle function
+    document.getElementById("darkToggle").onclick = function () {
+        document.body.classList.toggle("dark");
+
+        if (document.body.classList.contains("dark")) {
+            localStorage.setItem("theme", "dark");
+            this.textContent = "Light Mode";
+        } else {
+            localStorage.setItem("theme", "light");
+            this.textContent = "Dark Mode";
+        }
+    };
+</script>
+
+</body>
+</html>

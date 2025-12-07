@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HAUH Tumbler Products - Our Best Seller</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <style>
+body {
+    box-sizing: border-box;
+}
+.mySlides {
+    display: none
+}
+
+img {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 900px;
+  position: relative;
+  margin: auto;
+  border: 3px solid black;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Number text (1/5 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+.audio-hidden {
+      display: none; /* Ensures audio player is completely hidden */
+    }
+</style>
+    
+
+<body>
+  <header>
+    <div class="profile">
+      <img src="photo/hauhlogo.png" alt="HAUH Logo">
+      <div>
+        <p style="font-size: 20px; margin: 0; color: whitesmoke;"><b>HAUH</b></p>
+        <h1 style="font-size: 16px; margin: 0; color: whitesmoke;"><i>Haus? Sedia HAUH!!</i></h1>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <div class="dropdown">
+          <li><a href="products.html">Our Products</a></li>
+          <div class="dropdown-content">
+            <a href="promotions.html" target="_blank">Promotion</a>
+            <a href="bestseller.html" target="_blank">Best Seller</a>
+          </div>
+        </div>
+        <li><a href="aboutus.html" target="_blank">About Us</a></li>
+        <li><a href="contact.html" target="_blank">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+    <h1 style="text-align: center; font-size: 40px;"><b>------ Our Best Seller ------</b></h1>
+    <h2 style="text-align: center; color: brown;">Explore our top tumbler!!</h2>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 5</div>
+          <img src="photo/best1.png" style="width:100%" alt="Travel Tumbler">
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 5</div>
+          <img src="photo/best2.png" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 5</div>
+          <img src="photo/best3.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 5</div>
+            <img src="photo/best4.png" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">5 / 5</div>
+          <img src="photo/best5.png" style="width:100%">
+      </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+        
+        <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+  
+  <!-- Hidden autoplay audio -->
+  <audio class="audio-hidden" autoplay loop>
+    <source src="audio/audiobestseller.mp3" type="audio/mpeg">
+    <source src="audio/audiobestseller.mp3" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+
+<br>
+  <div class="reward">
+    <a href="contact.html">&#128222 Chat Us</a>
+  </div>
+</body>
+<footer>
+    <p>&copy; 2025 Copyright Reserved Hauh</p>
+  </footer>
+</html>
